@@ -1,6 +1,6 @@
-package com.sampson.learnspringaop.aopexemple.business;
+package com.sampson.learnspringaop.aopexample.business;
 
-import com.sampson.learnspringaop.aopexemple.data.DataService1;
+import com.sampson.learnspringaop.aopexample.data.DataService1;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

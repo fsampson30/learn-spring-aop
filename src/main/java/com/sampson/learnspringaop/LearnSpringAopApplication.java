@@ -1,6 +1,6 @@
 package com.sampson.learnspringaop;
 
-import com.sampson.learnspringaop.aopexemple.business.BusinessService1;
+import com.sampson.learnspringaop.aopexample.business.BusinessService1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

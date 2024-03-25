@@ -1,4 +1,4 @@
-package com.sampson.learnspringaop.aopexemple.data;
+package com.sampson.learnspringaop.aopexample.data;
 
 import org.springframework.stereotype.Repository;
 
