@@ -12,22 +12,22 @@ public class LoggingAspect {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Before("execution(* com.sampson.learnspringaop.aopexample.business.*.*(..))")
+    @Before("com.sampson.learnspringaop.aopexample.aspects.CommonPointcutConfig.businessPackageConfig()")
     public void logMethodCall(JoinPoint joinPoint) {
         logger.info("Before Aspect - Method is called - {}", joinPoint);
     }
 
-    @After("execution(* com.sampson.learnspringaop.aopexample.business.*.*(..))")
+    @After("com.sampson.learnspringaop.aopexample.aspects.CommonPointcutConfig.businessPackageConfig()")
     public void logMethodCallAfterExecution(JoinPoint joinPoint) {
         logger.info("After Aspect - has executed - {}", joinPoint);
     }
 
-    @AfterThrowing(value = "execution(* com.sampson.learnspringaop.aopexample.business.*.*(..))", throwing = "exception")
+    @AfterThrowing(value = "com.sampson.learnspringaop.aopexample.aspects.CommonPointcutConfig.businessPackageConfig()", throwing = "exception")
     public void logMethodCallAfterThrowing(JoinPoint joinPoint, Exception exception) {
         logger.info("After Throwing Aspect - {} - has executed - {}", joinPoint, exception);
     }
 
-    @AfterReturning(pointcut = "execution(* com.sampson.learnspringaop.aopexample.business.*.*(..))", returning = "resultValue")
+    @AfterReturning(pointcut = "com.sampson.learnspringaop.aopexample.aspects.CommonPointcutConfig.businessPackageConfig()", returning = "resultValue")
     public void logMethodCallAfterReturning(JoinPoint joinPoint, Object resultValue) {
         logger.info("After Throwing Aspect -{} - has executed - {}", joinPoint, resultValue);
     }
