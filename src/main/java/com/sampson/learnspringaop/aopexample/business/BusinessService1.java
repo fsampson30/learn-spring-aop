@@ -18,4 +18,8 @@ public class BusinessService1 {
         int [] data = dataService1.retrieveData();
         return Arrays.stream(data).max().orElse(0);
     }
+
+    public int calculateSum(){
+        throw new RuntimeException("Something Went Wrong");
+    }
 }
